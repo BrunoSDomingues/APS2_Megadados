@@ -258,7 +258,6 @@ def test_patch_existent_task():
 # Teste 11: atualizar uma task que não existe usando patch
 def test_patch_nonexistent_task():
     inv_uuid = uuid4()
-    print(inv_uuid)
     response = client.patch(
         f"/task/{inv_uuid}",
         json={"description": "esta task não existe", "completed": "False"},
